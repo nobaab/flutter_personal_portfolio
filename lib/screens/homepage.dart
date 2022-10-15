@@ -229,6 +229,56 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Row(
+                        children: [
+                          RotatedBox(
+                            quarterTurns: 3,
+                            child: SizedBox(
+                              height: 500,
+                              width: 500,
+                              child: DefaultTabController(
+                                length: 5,
+                                initialIndex: 4,
+                                child: Column(
+                                  children: [
+                                    const TabBar(
+                                      labelColor: textColor,
+                                      unselectedLabelColor: bigText,
+                                      indicatorColor: textColor,
+                                      tabs: [
+                                        Tab(text: 'WEEK'),
+                                        Tab(text: 'WEEK'),
+                                        Tab(text: 'WEEK'),
+                                        Tab(text: 'WEEK'),
+                                        Tab(text: 'WEEK'),
+                                      ],
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                          decoration: const BoxDecoration(
+                                              border: Border(
+                                                  top: BorderSide(
+                                                      color: Colors.grey,
+                                                      width: 0.5))),
+                                          child: const TabBarView(
+                                              children: <Widget>[
+                                                Tab1(),
+                                                Tab1(),
+                                                Tab1(),
+                                                Tab1(),
+                                                Tab1(),
+                                              ])),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -246,6 +296,29 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class Tab1 extends StatelessWidget {
+  const Tab1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: const [
+        SizedBox(
+          height: 20,
+        ),
+        RotatedBox(
+          quarterTurns: 1,
+          child: Text(
+            "GGWP",
+            style: TextStyle(color: Colors.red),
+          ),
+        )
+      ],
     );
   }
 }
