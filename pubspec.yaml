@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: any
   flutter_svg: any
+  vertical_tabs_flutter: ^1.0.0
 
 dev_dependencies:
   flutter_test:

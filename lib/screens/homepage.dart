@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/config/appbar_about.dart';
 import 'package:personal_portfolio/config/constants/colors.dart';
 import 'package:personal_portfolio/config/constants/string_config.dart';
+import 'package:vertical_tabs_flutter/vertical_tabs.dart';
 
 import '../config/constants/fonts.dart';
 import '../config/tecs.dart';
@@ -122,16 +123,10 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      width: 80,
-                    ),
                     Column(
                       children: [
-                        Image.asset(
-                          "assets/gifs/modules.gif",
-                          height: 600,
-                          width: 600,
-                        ),
+                        Image.asset("assets/gifs/modules.gif",
+                            height: 500, width: 500),
                       ],
                     ),
                   ],
@@ -232,53 +227,85 @@ class HomePage extends StatelessWidget {
                       const SizedBox(
                         height: 50,
                       ),
+
                       Row(
                         children: [
-                          RotatedBox(
-                            quarterTurns: 3,
-                            child: SizedBox(
-                              height: 500,
-                              width: 500,
-                              child: DefaultTabController(
-                                length: 5,
-                                initialIndex: 4,
-                                child: Column(
-                                  children: [
-                                    const TabBar(
-                                      labelColor: textColor,
-                                      unselectedLabelColor: bigText,
-                                      indicatorColor: textColor,
-                                      tabs: [
-                                        Tab(text: 'WEEK'),
-                                        Tab(text: 'WEEK'),
-                                        Tab(text: 'WEEK'),
-                                        Tab(text: 'WEEK'),
-                                        Tab(text: 'WEEK'),
-                                      ],
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                          decoration: const BoxDecoration(
-                                              border: Border(
-                                                  top: BorderSide(
-                                                      color: Colors.grey,
-                                                      width: 0.5))),
-                                          child: const TabBarView(
-                                              children: <Widget>[
-                                                Tab1(),
-                                                Tab1(),
-                                                Tab1(),
-                                                Tab1(),
-                                                Tab1(),
-                                              ])),
-                                    )
-                                  ],
-                                ),
-                              ),
+                          SizedBox(
+                            height: 500,
+                            width: 500,
+                            child: VerticalTabs(
+                              indicatorColor: textColor,
+                              tabBackgroundColor: backgroundColor,
+                              backgroundColor: Colors.transparent,
+                              tabsWidth: 150,
+                              tabs: const <Tab>[
+                                Tab(
+                                    child: Text('Flutter'),
+                                    icon: Icon(Icons.phone)),
+                                Tab(child: Text('Dart')),
+                                Tab(child: Text('NodeJS')),
+                                Tab(child: Text('PHP')),
+                                Tab(child: Text('HTML 5')),
+                              ],
+                              contents: const <Widget>[
+                                Text('Flutter'),
+                                Text('Dart'),
+                                Text('NodeJS'),
+                                Text('PHP'),
+                                Text('HTML 5')
+                              ],
                             ),
                           ),
                         ],
                       ),
+
+                      // Row(
+                      //   children: [
+                      //     RotatedBox(
+                      //       quarterTurns: 3,
+                      //       child: SizedBox(
+                      //         height: 500,
+                      //         width: 500,
+                      //         child: DefaultTabController(
+                      //           length: 5,
+                      //           initialIndex: 4,
+                      //           child: Column(
+                      //             children: [
+                      //               const TabBar(
+                      //                 labelColor: textColor,
+                      //                 unselectedLabelColor: bigText,
+                      //                 indicatorColor: textColor,
+                      //                 tabs: [
+                      //                   Tab(text: 'WEEK'),
+                      //                   Tab(text: 'WEEK'),
+                      //                   Tab(text: 'WEEK'),
+                      //                   Tab(text: 'WEEK'),
+                      //                   Tab(text: 'WEEK'),
+                      //                 ],
+                      //               ),
+                      //               Expanded(
+                      //                 child: Container(
+                      //                     decoration: const BoxDecoration(
+                      //                         border: Border(
+                      //                             top: BorderSide(
+                      //                                 color: Colors.grey,
+                      //                                 width: 0.5))),
+                      //                     child: const TabBarView(
+                      //                         children: <Widget>[
+                      //                           Tab1(),
+                      //                           Tab1(),
+                      //                           Tab1(),
+                      //                           Tab1(),
+                      //                           Tab1(),
+                      //                         ])),
+                      //               )
+                      //             ],
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 ),
