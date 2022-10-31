@@ -1,7 +1,4 @@
-import 'package:google_fonts/google_fonts.dart';
-import 'colors.dart';
 import 'package:flutter/material.dart';
 
-final listPageTitleStyle = GoogleFonts.patrickHand(
-  textStyle: const TextStyle(fontSize: 20, color: textColor, letterSpacing: .5),
-);
+listPageTitleStyle({Color color = Colors.black}) =>
+    TextStyle(fontSize: 13, fontFamily: 'sfmono', color: color);

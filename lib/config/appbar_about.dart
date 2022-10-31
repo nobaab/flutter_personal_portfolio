@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants/colors.dart';
 import 'constants/fonts.dart';
 
 class AppbarWidget extends StatelessWidget {
@@ -13,7 +14,7 @@ class AppbarWidget extends StatelessWidget {
           onPressed: () {},
           child: Text(
             " $appbarText ",
-            style: listPageTitleStyle,
+            style: listPageTitleStyle(color: appBarColor),
           ),
         )
       ],

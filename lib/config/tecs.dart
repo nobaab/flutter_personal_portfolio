@@ -12,7 +12,7 @@ class Techs extends StatelessWidget {
       children: [
         const Icon(
           Icons.play_arrow,
-          color: textColor,
+          color: neonColor,
           size: 10,
         ),
         Text(

@@ -37,6 +37,7 @@ dependencies:
   google_fonts: any
   flutter_svg: any
   vertical_tabs_flutter: ^1.0.0
+  sizer:
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +66,11 @@ flutter:
     - assets/gifs/
     - assets/svgicons/
     - assets/images/
+
+  fonts:
+    - family: sfmono
+      fonts:
+        - asset: assets/fonts/sfmono.otf  
     
  
 
