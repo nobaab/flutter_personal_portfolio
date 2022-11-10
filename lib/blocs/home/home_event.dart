@@ -7,11 +7,16 @@ abstract class HomeEvent extends Equatable {
 
 // ignore: must_be_immutable
 class HoverEvent extends HomeEvent {
-  Color color;
-  HoverEvent({
-    required this.color,
-  });
-
   @override
-  List<Object?> get props => [color];
+  List<Object?> get props => [];
+}
+
+class AboutEvent extends HomeEvent {
+  @override
+  List<Object?> get props => [];
+}
+
+class HoverOutEvent extends HomeEvent {
+  @override
+  List<Object?> get props => [];
 }
