@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/screens/homepage.dart';
 import 'package:personal_portfolio/widgets/left_slider.dart';
 import 'package:personal_portfolio/widgets/right_slider.dart';
-import 'blocs/appbar/appbar_bloc.dart';
+import 'blocs/hover/hover_bloc.dart';
 import 'config/appbar_about.dart';
 import 'config/constants/colors.dart';
 import 'config/constants/string_config.dart';
@@ -16,7 +16,7 @@ class RootScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: BlocProvider(
-        create: (context) => AppbarBloc(),
+        create: (context) => HoverBloc(),
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: backgroundColor,

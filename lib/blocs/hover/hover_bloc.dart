@@ -4,11 +4,11 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:personal_portfolio/config/constants/colors.dart';
 
-part 'appbar_event.dart';
-part 'appbar_state.dart';
+part 'hover_event.dart';
+part 'hover_state.dart';
 
-class AppbarBloc extends Bloc<AppbarEvent, AppbarState> {
-  AppbarBloc() : super(AppbarInitial()) {
+class HoverBloc extends Bloc<HoverEvent, HoverState> {
+  HoverBloc() : super(AppbarInitial()) {
     on<HomeButtonEvent>(
         (event, emit) => {emit(HomeButtonState(color: neonColor))});
     on<AboutButtonEvent>(

@@ -1,16 +1,16 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
-part of 'appbar_bloc.dart';
+part of 'hover_bloc.dart';
 
-abstract class AppbarState extends Equatable {
-  const AppbarState();
+abstract class HoverState extends Equatable {
+  const HoverState();
 }
 
-class AppbarInitial extends AppbarState {
+class AppbarInitial extends HoverState {
   @override
   List<Object> get props => [];
 }
 
-class HomeButtonState extends AppbarState {
+class HomeButtonState extends HoverState {
   Color color;
   HomeButtonState({
     required this.color,
@@ -20,7 +20,7 @@ class HomeButtonState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class AboutButtonState extends AppbarState {
+class AboutButtonState extends HoverState {
   Color color;
   AboutButtonState({
     required this.color,
@@ -30,7 +30,7 @@ class AboutButtonState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class ServiceButtonState extends AppbarState {
+class ServiceButtonState extends HoverState {
   Color color;
   ServiceButtonState({
     required this.color,
@@ -40,7 +40,7 @@ class ServiceButtonState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class ProjectButtonState extends AppbarState {
+class ProjectButtonState extends HoverState {
   Color color;
   ProjectButtonState({
     required this.color,
@@ -50,7 +50,7 @@ class ProjectButtonState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class ContactButtonState extends AppbarState {
+class ContactButtonState extends HoverState {
   Color color;
   ContactButtonState({
     required this.color,
@@ -60,7 +60,7 @@ class ContactButtonState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class GithubHoverState extends AppbarState {
+class GithubHoverState extends HoverState {
   Color color;
   double size;
   GithubHoverState({
@@ -71,7 +71,7 @@ class GithubHoverState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class InstaHoverState extends AppbarState {
+class InstaHoverState extends HoverState {
   Color color;
   double size;
   InstaHoverState({
@@ -82,7 +82,7 @@ class InstaHoverState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class LinkedInHoverState extends AppbarState {
+class LinkedInHoverState extends HoverState {
   Color color;
   double size;
   LinkedInHoverState({
@@ -94,7 +94,7 @@ class LinkedInHoverState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class TwitterHoverState extends AppbarState {
+class TwitterHoverState extends HoverState {
   Color color;
   double size;
   TwitterHoverState({
@@ -105,7 +105,7 @@ class TwitterHoverState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class StackHoverState extends AppbarState {
+class StackHoverState extends HoverState {
   Color color;
   double size;
   StackHoverState({
@@ -116,7 +116,7 @@ class StackHoverState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class EmailHoverState extends AppbarState {
+class EmailHoverState extends HoverState {
   Color color;
   double size;
   EmailHoverState({
@@ -127,7 +127,7 @@ class EmailHoverState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class ProfileImageState extends AppbarState {
+class ProfileImageState extends HoverState {
   double height;
   double width;
   BlendMode blendMode;
@@ -141,7 +141,7 @@ class ProfileImageState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class ProfileImageBlendState extends AppbarState {
+class ProfileImageBlendState extends HoverState {
   BlendMode blendMode;
   ProfileImageBlendState({
     required this.blendMode,
@@ -151,7 +151,7 @@ class ProfileImageBlendState extends AppbarState {
   List<Object?> get props => [];
 }
 
-class HoverOutState extends AppbarState {
+class HoverOutState extends HoverState {
   @override
   List<Object?> get props => [];
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../blocs/appbar/appbar_bloc.dart';
+import '../blocs/hover/hover_bloc.dart';
 import '../config/constants/colors.dart';
 
 class RightSlide extends StatefulWidget {
@@ -14,7 +13,7 @@ class RightSlide extends StatefulWidget {
 class _RightSlideState extends State<RightSlide> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AppbarBloc, AppbarState>(
+    return BlocBuilder<HoverBloc, HoverState>(
       builder: (context, state) {
         return Expanded(
           flex: 1,
@@ -30,10 +29,10 @@ class _RightSlideState extends State<RightSlide> {
                         onTap: () {},
                         onHover: (value) {
                           if (value) {
-                            BlocProvider.of<AppbarBloc>(context)
+                            BlocProvider.of<HoverBloc>(context)
                                 .add(EmailHoverEvent());
                           } else {
-                            BlocProvider.of<AppbarBloc>(context)
+                            BlocProvider.of<HoverBloc>(context)
                                 .add(HoverOutEvent());
                           }
                         },

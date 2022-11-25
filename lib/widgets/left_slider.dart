@@ -3,14 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:personal_portfolio/config/constants/colors.dart';
 
-import '../blocs/appbar/appbar_bloc.dart';
+import '../blocs/hover/hover_bloc.dart';
 
 class LeftSlide extends StatelessWidget {
   const LeftSlide({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AppbarBloc, AppbarState>(
+    return BlocBuilder<HoverBloc, HoverState>(
       builder: (context, state) {
         return Expanded(
           flex: 1,
@@ -34,10 +34,10 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(GithubHoverEvent());
                             } else {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(HoverOutEvent());
                             }
                           },
@@ -61,10 +61,10 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(InstaHoverEvent());
                             } else {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(HoverOutEvent());
                             }
                           },
@@ -88,10 +88,10 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(LinkedInHoverEvent());
                             } else {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(HoverOutEvent());
                             }
                           },
@@ -116,10 +116,10 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(TwitterHoverEvent());
                             } else {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(HoverOutEvent());
                             }
                           },
@@ -144,10 +144,10 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(StackHoverEvent());
                             } else {
-                              BlocProvider.of<AppbarBloc>(context)
+                              BlocProvider.of<HoverBloc>(context)
                                   .add(HoverOutEvent());
                             }
                           },

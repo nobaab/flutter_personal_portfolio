@@ -3,8 +3,6 @@ import 'package:personal_portfolio/config/constants/string_config.dart';
 import 'package:personal_portfolio/root.dart';
 import 'package:sizer/sizer.dart';
 
-import 'screens/homepage.dart';
-
 void main() {
   runApp(const MyApp());
 }

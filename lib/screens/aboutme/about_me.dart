@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../blocs/appbar/appbar_bloc.dart';
+import '../../blocs/hover/hover_bloc.dart';
 import '../../config/constants/colors.dart';
 import '../../config/constants/string_config.dart';
 import '../../config/tecs.dart';
@@ -14,7 +13,7 @@ class AboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AppbarBloc, AppbarState>(
+    return BlocBuilder<HoverBloc, HoverState>(
       builder: (context, state) {
         return Padding(
           padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
@@ -110,10 +109,10 @@ class AboutMe extends StatelessWidget {
                         onTap: () {},
                         onHover: (value) {
                           if (value) {
-                            BlocProvider.of<AppbarBloc>(context)
+                            BlocProvider.of<HoverBloc>(context)
                                 .add(ProfileImageEvent());
                           } else {
-                            BlocProvider.of<AppbarBloc>(context)
+                            BlocProvider.of<HoverBloc>(context)
                                 .add(HoverOutEvent());
                           }
                         },

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:personal_portfolio/blocs/appbar/appbar_bloc.dart';
+import '../blocs/hover/hover_bloc.dart';
 import 'constants/colors.dart';
 import 'constants/fonts.dart';
 
@@ -10,7 +10,7 @@ class AppbarWidget extends StatelessWidget {
   const AppbarWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AppbarBloc, AppbarState>(
+    return BlocBuilder<HoverBloc, HoverState>(
       builder: (context, state) {
         return Row(
           children: [
@@ -18,9 +18,9 @@ class AppbarWidget extends StatelessWidget {
               onPressed: () {},
               onHover: (value) {
                 if (value) {
-                  BlocProvider.of<AppbarBloc>(context).add(HomeButtonEvent());
+                  BlocProvider.of<HoverBloc>(context).add(HomeButtonEvent());
                 } else {
-                  BlocProvider.of<AppbarBloc>(context).add(HoverOutEvent());
+                  BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                 }
               },
               child: Text(
@@ -34,9 +34,9 @@ class AppbarWidget extends StatelessWidget {
               onPressed: () {},
               onHover: (value) {
                 if (value) {
-                  BlocProvider.of<AppbarBloc>(context).add(AboutButtonEvent());
+                  BlocProvider.of<HoverBloc>(context).add(AboutButtonEvent());
                 } else {
-                  BlocProvider.of<AppbarBloc>(context).add(HoverOutEvent());
+                  BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                 }
               },
               child: Text(
@@ -50,10 +50,9 @@ class AppbarWidget extends StatelessWidget {
               onPressed: () {},
               onHover: (value) {
                 if (value) {
-                  BlocProvider.of<AppbarBloc>(context)
-                      .add(ServiceButtonEvent());
+                  BlocProvider.of<HoverBloc>(context).add(ServiceButtonEvent());
                 } else {
-                  BlocProvider.of<AppbarBloc>(context).add(HoverOutEvent());
+                  BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                 }
               },
               child: Text(
@@ -68,10 +67,9 @@ class AppbarWidget extends StatelessWidget {
               onPressed: () {},
               onHover: (value) {
                 if (value) {
-                  BlocProvider.of<AppbarBloc>(context)
-                      .add(ProjectButtonEvent());
+                  BlocProvider.of<HoverBloc>(context).add(ProjectButtonEvent());
                 } else {
-                  BlocProvider.of<AppbarBloc>(context).add(HoverOutEvent());
+                  BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                 }
               },
               child: Text(
@@ -86,10 +84,9 @@ class AppbarWidget extends StatelessWidget {
               onPressed: () {},
               onHover: (value) {
                 if (value) {
-                  BlocProvider.of<AppbarBloc>(context)
-                      .add(ContactButtonEvent());
+                  BlocProvider.of<HoverBloc>(context).add(ContactButtonEvent());
                 } else {
-                  BlocProvider.of<AppbarBloc>(context).add(HoverOutEvent());
+                  BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                 }
               },
               child: Text(
