@@ -60,6 +60,97 @@ class ContactButtonState extends AppbarState {
   List<Object?> get props => [];
 }
 
+class GithubHoverState extends AppbarState {
+  Color color;
+  double size;
+  GithubHoverState({
+    required this.color,
+    required this.size,
+  });
+  @override
+  List<Object?> get props => [];
+}
+
+class InstaHoverState extends AppbarState {
+  Color color;
+  double size;
+  InstaHoverState({
+    required this.color,
+    required this.size,
+  });
+  @override
+  List<Object?> get props => [];
+}
+
+class LinkedInHoverState extends AppbarState {
+  Color color;
+  double size;
+  LinkedInHoverState({
+    required this.color,
+    required this.size,
+  });
+
+  @override
+  List<Object?> get props => [];
+}
+
+class TwitterHoverState extends AppbarState {
+  Color color;
+  double size;
+  TwitterHoverState({
+    required this.color,
+    required this.size,
+  });
+  @override
+  List<Object?> get props => [];
+}
+
+class StackHoverState extends AppbarState {
+  Color color;
+  double size;
+  StackHoverState({
+    required this.color,
+    required this.size,
+  });
+  @override
+  List<Object?> get props => [];
+}
+
+class EmailHoverState extends AppbarState {
+  Color color;
+  double size;
+  EmailHoverState({
+    required this.color,
+    required this.size,
+  });
+  @override
+  List<Object?> get props => [];
+}
+
+class ProfileImageState extends AppbarState {
+  double height;
+  double width;
+  BlendMode blendMode;
+  ProfileImageState({
+    required this.height,
+    required this.width,
+    required this.blendMode,
+  });
+
+  @override
+  List<Object?> get props => [];
+}
+
+class ProfileImageBlendState extends AppbarState {
+  BlendMode blendMode;
+  ProfileImageBlendState({
+    required this.blendMode,
+  });
+
+  @override
+  List<Object?> get props => [];
+}
+
 class HoverOutState extends AppbarState {
   @override
   List<Object?> get props => [];
