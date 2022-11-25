@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:personal_portfolio/screens/homepage.dart';
+import 'package:personal_portfolio/blocs/hover/hover_bloc.dart';
+import 'package:personal_portfolio/responsive/responsive.dart';
+import 'package:personal_portfolio/screens/aboutme/about.dart';
+import 'package:personal_portfolio/screens/appbar/mobile_drawer.dart';
+import 'package:personal_portfolio/screens/home/homepage.dart';
 import 'package:personal_portfolio/widgets/left_slider.dart';
 import 'package:personal_portfolio/widgets/right_slider.dart';
-import 'blocs/hover/hover_bloc.dart';
-import 'config/appbar_about.dart';
+import 'screens/appbar/appbar_desktop.dart';
 import 'config/constants/colors.dart';
 import 'config/constants/string_config.dart';
 
@@ -18,6 +21,7 @@ class RootScreen extends StatelessWidget {
       child: BlocProvider(
         create: (context) => HoverBloc(),
         child: Scaffold(
+          drawer: !Responsive.isDesktop(context) ? const MobileDrawer() : null,
           appBar: AppBar(
             backgroundColor: backgroundColor,
             title: Text(
@@ -27,34 +31,15 @@ class RootScreen extends StatelessWidget {
               ),
             ),
             actions: [
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-                  child: Row(
-                    children: [
-                      const AppbarWidget(),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Container(
-                        height: 40,
-                        width: 80,
-                        decoration: BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(3.0)),
-                            border: Border.all(color: neonColor, width: 1.5)),
-                        child: const Center(
-                          child: Text('Resume',
-                              style: TextStyle(
-                                  color: neonColor,
-                                  fontSize: 13,
-                                  letterSpacing: 1,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'sfmono')),
-                        ),
-                      ),
-                    ],
-                  )),
+              !Responsive.isMobile(context) && !Responsive.isTablet(context)
+                  ? Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                      child: Row(
+                        children: const [
+                          AppbarWidget(),
+                        ],
+                      ))
+                  : const SizedBox()
             ],
           ),
           body: Container(
@@ -69,10 +54,24 @@ class RootScreen extends StatelessWidget {
             //       Color(0xff020c1b)
             //     ])),
             child: Row(
-              children: const [
-                LeftSlide(),
-                Expanded(flex: 8, child: HomePage()),
-                RightSlide()
+              children: [
+                Responsive.isMobile(context) || Responsive.isTablet(context)
+                    ? const SizedBox()
+                    : const LeftSlide(),
+                Expanded(
+                    flex: 8,
+                    child: ListView(
+                      children: const [
+                        HomePage(),
+                        About(),
+                        SizedBox(
+                          height: 50,
+                        )
+                      ],
+                    )),
+                Responsive.isMobile(context) || Responsive.isTablet(context)
+                    ? const SizedBox()
+                    : const RightSlide()
               ],
             ),
           ),

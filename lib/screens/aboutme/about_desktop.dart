@@ -6,8 +6,8 @@ import '../../config/constants/colors.dart';
 import '../../config/constants/string_config.dart';
 import '../../config/tecs.dart';
 
-class AboutMe extends StatelessWidget {
-  const AboutMe({
+class AboutMeDesktop extends StatelessWidget {
+  const AboutMeDesktop({
     Key? key,
   }) : super(key: key);
 
