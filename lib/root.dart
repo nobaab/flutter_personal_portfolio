@@ -5,6 +5,7 @@ import 'package:personal_portfolio/blocs/hover/hover_bloc.dart';
 import 'package:personal_portfolio/responsive/responsive.dart';
 import 'package:personal_portfolio/screens/aboutme/about.dart';
 import 'package:personal_portfolio/screens/appbar/mobile_drawer.dart';
+import 'package:personal_portfolio/screens/experience/experience.dart';
 import 'package:personal_portfolio/screens/home/homepage.dart';
 import 'package:personal_portfolio/widgets/left_slider.dart';
 import 'package:personal_portfolio/widgets/right_slider.dart';
@@ -66,7 +67,8 @@ class RootScreen extends StatelessWidget {
                         About(),
                         SizedBox(
                           height: 50,
-                        )
+                        ),
+                        Experience()
                       ],
                     )),
                 Responsive.isMobile(context) || Responsive.isTablet(context)
