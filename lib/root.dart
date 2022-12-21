@@ -25,6 +25,7 @@ class RootScreen extends StatelessWidget {
           drawer: !Responsive.isDesktop(context) ? const MobileDrawer() : null,
           appBar: AppBar(
             backgroundColor: backgroundColor,
+            centerTitle: false,
             title: Text(
               '$name ()',
               style: GoogleFonts.patrickHand(

@@ -8,6 +8,8 @@ class ExperienceDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int _selectedIndex = 0;
+
     return Container(
       padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
       child: Column(
@@ -39,18 +41,41 @@ class ExperienceDesktop extends StatelessWidget {
               )
             ],
           ),
-          ListView.builder(
-              itemCount: 10,
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [],
-                  ),
-                );
-              }),
+          Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: Column(
+                  children: [
+                    ListView.builder(
+                        itemCount: 5,
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            height: MediaQuery.of(context).size.height * 0.07,
+                            decoration: const BoxDecoration(color: Colors.blue),
+                            child: Text("${index + 1}"),
+                          );
+                        })
+                  ],
+                ),
+              ),
+              Expanded(
+                flex: 8,
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      height: MediaQuery.of(context).size.height * 0.35,
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          )
         ],
       ),
     );
