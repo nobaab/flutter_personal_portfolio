@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:personal_portfolio/config/constants/colors.dart';
+import 'package:personal_portfolio/models/exp_model.dart';
 
 part 'hover_event.dart';
 part 'hover_state.dart';
@@ -42,5 +43,11 @@ class HoverBloc extends Bloc<HoverEvent, HoverState> {
         {emit(ProfileImageBlendState(blendMode: BlendMode.lighten))});
 
     on<HoverOutEvent>((event, emit) => {emit(HoverOutState())});
+
+    on<DataLoadEvent>((event, emit) {
+      emit(DataLoadedState(
+          experienceData: event.experienceData,
+          selectedIndex: event.selectedIndex));
+    });
   }
 }

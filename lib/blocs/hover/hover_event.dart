@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'hover_bloc.dart';
 
 abstract class HoverEvent extends Equatable {
@@ -72,4 +73,15 @@ class ProfileImageBlendEvent extends HoverEvent {
 class HoverOutEvent extends HoverEvent {
   @override
   List<Object?> get props => [];
+}
+
+class DataLoadEvent extends HoverEvent {
+  final ExperienceModel experienceData;
+  final int selectedIndex;
+  const DataLoadEvent({
+    required this.experienceData,
+    required this.selectedIndex,
+  });
+  @override
+  List<Object?> get props => [experienceData];
 }

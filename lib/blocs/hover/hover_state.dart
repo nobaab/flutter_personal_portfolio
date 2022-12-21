@@ -155,3 +155,14 @@ class HoverOutState extends HoverState {
   @override
   List<Object?> get props => [];
 }
+
+class DataLoadedState extends HoverState {
+  final ExperienceModel experienceData;
+  final int selectedIndex;
+  const DataLoadedState({
+    required this.experienceData,
+    required this.selectedIndex,
+  });
+  @override
+  List<Object?> get props => [experienceData, selectedIndex];
+}
