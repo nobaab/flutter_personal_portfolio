@@ -13,6 +13,9 @@ const containerColor = Color(0xFF162742);
 const appBarColor = Color(0xffccd6f6);
 
 const textLight = Color(0xff8892b0);
+const headerColor = Color(0xFFCCD6F6);
+
+const tabColor = Color(0xFF112240);
 
 // class ColorConfigs {
 //   var primaryColor = const Color(0xff0a192e);

@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class ExperienceModel {
   String? companyName;
   String? position;
@@ -15,3 +17,22 @@ class ExperienceModel {
       this.details,
       this.color});
 }
+
+final List<ExperienceModel> experience = [
+  ExperienceModel(
+      companyName: "Bizzntek Ltd",
+      position: "Associate Software Engineer",
+      year: "September 2022 - Present",
+      currently: "GG",
+      color: Colors.blue,
+      details:
+          "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
+  ExperienceModel(
+      companyName: "Bizzntek Ltd",
+      position: "Associate Software Engineer",
+      year: "September 2022 - Present",
+      currently: "GG",
+      color: Colors.blue,
+      details:
+          "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
+];

@@ -32,7 +32,7 @@ class AboutMeDesktop extends StatelessWidget {
                           TextSpan(
                             text: ' About Me',
                             style: GoogleFonts.robotoSlab(
-                                color: Colors.white,
+                                color: headerColor,
                                 letterSpacing: 1,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 25),

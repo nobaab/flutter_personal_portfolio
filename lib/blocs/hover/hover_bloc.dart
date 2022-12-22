@@ -47,7 +47,8 @@ class HoverBloc extends Bloc<HoverEvent, HoverState> {
     on<DataLoadEvent>((event, emit) {
       emit(DataLoadedState(
           experienceData: event.experienceData,
-          selectedIndex: event.selectedIndex));
+          selectedIndex: event.selectedIndex,
+          color: tabColor));
     });
   }
 }
