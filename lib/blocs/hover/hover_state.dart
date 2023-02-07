@@ -168,3 +168,23 @@ class DataLoadedState extends HoverState {
   @override
   List<Object?> get props => [experienceData, selectedIndex, color];
 }
+
+class WorkImageState extends HoverState {
+  final int selectedIndex;
+  const WorkImageState({
+    required this.selectedIndex,
+  });
+
+  @override
+  List<Object?> get props => [selectedIndex];
+}
+
+class WorkContainerState extends HoverState {
+  final int selectedIndex;
+  const WorkContainerState({
+    required this.selectedIndex,
+  });
+
+  @override
+  List<Object?> get props => [selectedIndex];
+}

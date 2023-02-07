@@ -7,8 +7,10 @@ import 'package:personal_portfolio/screens/aboutme/about.dart';
 import 'package:personal_portfolio/screens/appbar/mobile_drawer.dart';
 import 'package:personal_portfolio/screens/experience/experience.dart';
 import 'package:personal_portfolio/screens/home/homepage.dart';
+import 'package:personal_portfolio/screens/work/work.dart';
 import 'package:personal_portfolio/widgets/left_slider.dart';
 import 'package:personal_portfolio/widgets/right_slider.dart';
+import 'package:sizer/sizer.dart';
 import 'screens/appbar/appbar_desktop.dart';
 import 'config/constants/colors.dart';
 import 'config/constants/string_config.dart';
@@ -57,24 +59,24 @@ class RootScreen extends StatelessWidget {
             //     ])),
             child: Row(
               children: [
-                Responsive.isMobile(context) || Responsive.isTablet(context)
-                    ? const SizedBox()
-                    : const LeftSlide(),
+                Responsive.isMobile(context) || Responsive.isTablet(context) ? const SizedBox() : const LeftSlide(),
                 Expanded(
                     flex: 8,
                     child: ListView(
-                      children: const [
-                        HomePage(),
-                        About(),
-                        SizedBox(
+                      children: [
+                        const HomePage(),
+                        const About(),
+                        const SizedBox(
                           height: 50,
                         ),
-                        Experience()
+                        const Experience(),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        const Work()
                       ],
                     )),
-                Responsive.isMobile(context) || Responsive.isTablet(context)
-                    ? const SizedBox()
-                    : const RightSlide()
+                Responsive.isMobile(context) || Responsive.isTablet(context) ? const SizedBox() : const RightSlide()
               ],
             ),
           ),

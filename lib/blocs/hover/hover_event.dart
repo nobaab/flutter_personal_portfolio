@@ -85,3 +85,21 @@ class DataLoadEvent extends HoverEvent {
   @override
   List<Object?> get props => [experienceData];
 }
+
+class WorkImageEvent extends HoverEvent {
+  final int selectedIndex;
+  const WorkImageEvent({
+    required this.selectedIndex,
+  });
+  @override
+  List<Object?> get props => [selectedIndex];
+}
+
+class WorkContainerEvent extends HoverEvent {
+  final int selectedIndex;
+  const WorkContainerEvent({
+    required this.selectedIndex,
+  });
+  @override
+  List<Object?> get props => [selectedIndex];
+}
