@@ -9,13 +9,7 @@ class ExperienceModel {
   String? currently;
   String? details;
   Color? color;
-  ExperienceModel(
-      {this.companyName,
-      this.position,
-      this.year,
-      this.currently,
-      this.details,
-      this.color});
+  ExperienceModel({this.companyName, this.position, this.year, this.currently, this.details, this.color});
 }
 
 final List<ExperienceModel> experience = [
@@ -25,14 +19,12 @@ final List<ExperienceModel> experience = [
       year: "September 2022 - Present",
       currently: "GG",
       color: Colors.blue,
-      details:
-          "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
+      details: "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
   ExperienceModel(
       companyName: "Bizzntek Ltd",
       position: "Associate Software Engineer",
       year: "September 2022 - Present",
       currently: "GG",
       color: Colors.blue,
-      details:
-          "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
+      details: "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
 ];

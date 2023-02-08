@@ -27,31 +27,19 @@ class LeftSlide extends StatelessWidget {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.07,
                         child: InkWell(
-                          // onTap: () async {
-                          //   await launchUrl(
-                          //       Uri.parse("https://github.com/jeeva-HBK"));
-                          // },
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(GithubHoverEvent());
+                              BlocProvider.of<HoverBloc>(context).add(GithubHoverEvent());
                             } else {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(HoverOutEvent());
+                              BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                             }
                           },
                           child: Container(
-                            margin: EdgeInsets.only(
-                                bottom:
-                                    state is GithubHoverState ? state.size : 0),
+                            margin: EdgeInsets.only(bottom: state is GithubHoverState ? state.size : 0),
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: SvgPicture.asset(
-                                'assets/svgicons/github.svg',
-                                color: state is GithubHoverState
-                                    ? state.color
-                                    : appBarColor,
-                                width: 22),
+                            child: SvgPicture.asset('assets/svgicons/github.svg',
+                                color: state is GithubHoverState ? state.color : appBarColor, width: 22),
                           ),
                         ),
                       ),
@@ -61,24 +49,16 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(InstaHoverEvent());
+                              BlocProvider.of<HoverBloc>(context).add(InstaHoverEvent());
                             } else {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(HoverOutEvent());
+                              BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                             }
                           },
                           child: Container(
-                            margin: EdgeInsets.only(
-                                bottom:
-                                    state is InstaHoverState ? state.size : 0),
+                            margin: EdgeInsets.only(bottom: state is InstaHoverState ? state.size : 0),
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: SvgPicture.asset(
-                                'assets/svgicons/instagram.svg',
-                                color: state is InstaHoverState
-                                    ? state.color
-                                    : appBarColor,
-                                width: 22),
+                            child: SvgPicture.asset('assets/svgicons/instagram.svg',
+                                color: state is InstaHoverState ? state.color : appBarColor, width: 22),
                           ),
                         ),
                       ),
@@ -88,25 +68,16 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(LinkedInHoverEvent());
+                              BlocProvider.of<HoverBloc>(context).add(LinkedInHoverEvent());
                             } else {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(HoverOutEvent());
+                              BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                             }
                           },
                           child: Container(
-                            margin: EdgeInsets.only(
-                                bottom: state is LinkedInHoverState
-                                    ? state.size
-                                    : 0),
+                            margin: EdgeInsets.only(bottom: state is LinkedInHoverState ? state.size : 0),
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: SvgPicture.asset(
-                                'assets/svgicons/linkedIn.svg',
-                                color: state is LinkedInHoverState
-                                    ? state.color
-                                    : appBarColor,
-                                width: 22),
+                            child: SvgPicture.asset('assets/svgicons/linkedIn.svg',
+                                color: state is LinkedInHoverState ? state.color : appBarColor, width: 22),
                           ),
                         ),
                       ),
@@ -116,25 +87,16 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(TwitterHoverEvent());
+                              BlocProvider.of<HoverBloc>(context).add(TwitterHoverEvent());
                             } else {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(HoverOutEvent());
+                              BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                             }
                           },
                           child: Container(
-                            margin: EdgeInsets.only(
-                                bottom: state is TwitterHoverState
-                                    ? state.size
-                                    : 0),
+                            margin: EdgeInsets.only(bottom: state is TwitterHoverState ? state.size : 0),
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: SvgPicture.asset(
-                                'assets/svgicons/twitter.svg',
-                                color: state is TwitterHoverState
-                                    ? state.color
-                                    : appBarColor,
-                                width: 22),
+                            child: SvgPicture.asset('assets/svgicons/twitter.svg',
+                                color: state is TwitterHoverState ? state.color : appBarColor, width: 22),
                           ),
                         ),
                       ),
@@ -144,24 +106,16 @@ class LeftSlide extends StatelessWidget {
                           onTap: () {},
                           onHover: (value) {
                             if (value) {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(StackHoverEvent());
+                              BlocProvider.of<HoverBloc>(context).add(StackHoverEvent());
                             } else {
-                              BlocProvider.of<HoverBloc>(context)
-                                  .add(HoverOutEvent());
+                              BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                             }
                           },
                           child: Container(
-                            margin: EdgeInsets.only(
-                                bottom:
-                                    state is StackHoverState ? state.size : 0),
+                            margin: EdgeInsets.only(bottom: state is StackHoverState ? state.size : 0),
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: SvgPicture.asset(
-                                'assets/svgicons/stackoverflow.svg',
-                                color: state is StackHoverState
-                                    ? state.color
-                                    : appBarColor,
-                                width: 22),
+                            child: SvgPicture.asset('assets/svgicons/stackoverflow.svg',
+                                color: state is StackHoverState ? state.color : appBarColor, width: 22),
                           ),
                         ),
                       ),

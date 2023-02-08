@@ -5,7 +5,9 @@ import 'package:personal_portfolio/blocs/hover/hover_bloc.dart';
 import 'package:personal_portfolio/responsive/responsive.dart';
 import 'package:personal_portfolio/screens/aboutme/about.dart';
 import 'package:personal_portfolio/screens/appbar/mobile_drawer.dart';
+import 'package:personal_portfolio/screens/contact/contract.dart';
 import 'package:personal_portfolio/screens/experience/experience.dart';
+import 'package:personal_portfolio/screens/footer/footer.dart';
 import 'package:personal_portfolio/screens/home/homepage.dart';
 import 'package:personal_portfolio/screens/work/work.dart';
 import 'package:personal_portfolio/widgets/left_slider.dart';
@@ -48,15 +50,6 @@ class RootScreen extends StatelessWidget {
           ),
           body: Container(
             color: backgroundColor,
-            // decoration: const BoxDecoration(
-            //     gradient: LinearGradient(
-            //         begin: Alignment.bottomCenter,
-            //         end: Alignment.topCenter,
-            //         colors: [
-            //       Color(0xff112240),
-            //       Color(0xff0a192f),
-            //       Color(0xff020c1b)
-            //     ])),
             child: Row(
               children: [
                 Responsive.isMobile(context) || Responsive.isTablet(context) ? const SizedBox() : const LeftSlide(),
@@ -66,14 +59,22 @@ class RootScreen extends StatelessWidget {
                       children: [
                         const HomePage(),
                         const About(),
-                        const SizedBox(
-                          height: 50,
+                        SizedBox(
+                          height: 5.h,
                         ),
                         const Experience(),
                         SizedBox(
                           height: 5.h,
                         ),
-                        const Work()
+                        const Work(),
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        const Contract(),
+                        SizedBox(
+                          height: 15.h,
+                        ),
+                        const Footer()
                       ],
                     )),
                 Responsive.isMobile(context) || Responsive.isTablet(context) ? const SizedBox() : const RightSlide()

@@ -188,3 +188,26 @@ class WorkContainerState extends HoverState {
   @override
   List<Object?> get props => [selectedIndex];
 }
+
+class GridViewState extends HoverState {
+  Color color;
+  EdgeInsetsGeometry padding;
+  final int selectedIndex;
+  GridViewState({
+    required this.color,
+    required this.padding,
+    required this.selectedIndex,
+  });
+
+  @override
+  List<Object?> get props => [color, padding, selectedIndex];
+}
+
+class LoadMoreState extends HoverState {
+  final int length;
+  const LoadMoreState({
+    required this.length,
+  });
+  @override
+  List<Object?> get props => [length];
+}

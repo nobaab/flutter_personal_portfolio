@@ -103,3 +103,26 @@ class WorkContainerEvent extends HoverEvent {
   @override
   List<Object?> get props => [selectedIndex];
 }
+
+// ignore: must_be_immutable
+class GridViewEvent extends HoverEvent {
+  Color color;
+  EdgeInsetsGeometry padding;
+  final int selectedIndex;
+  GridViewEvent({
+    required this.color,
+    required this.padding,
+    required this.selectedIndex,
+  });
+  @override
+  List<Object?> get props => [color, padding];
+}
+
+class LoadMoreEvent extends HoverEvent {
+  final int length;
+  const LoadMoreEvent({
+    required this.length,
+  });
+  @override
+  List<Object?> get props => [length];
+}

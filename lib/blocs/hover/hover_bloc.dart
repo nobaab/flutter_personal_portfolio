@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:personal_portfolio/config/constants/colors.dart';
 import 'package:personal_portfolio/models/exp_model.dart';
 
@@ -36,6 +37,18 @@ class HoverBloc extends Bloc<HoverEvent, HoverState> {
 
     on<DataLoadEvent>((event, emit) {
       emit(DataLoadedState(experienceData: event.experienceData, selectedIndex: event.selectedIndex, color: tabColor));
+    });
+
+    on<GridViewEvent>((event, emit) {
+      emit(GridViewState(
+        color: event.color,
+        padding: event.padding,
+        selectedIndex: event.selectedIndex,
+      ));
+    });
+
+    on<LoadMoreEvent>((event, emit) {
+      emit(LoadMoreState(length: event.length));
     });
   }
 }
