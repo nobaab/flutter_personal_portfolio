@@ -149,12 +149,13 @@ class ExperienceDesktop extends StatelessWidget {
                                           height: 10,
                                         ),
                                         Row(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Expanded(
+                                            const Expanded(
                                               flex: 0,
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: const [
+                                                children: [
                                                   Padding(
                                                     padding: EdgeInsets.only(right: 5.0),
                                                     child: Icon(
@@ -172,7 +173,7 @@ class ExperienceDesktop extends StatelessWidget {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    experience[state.selectedIndex].details!,
+                                                    experience[state.selectedIndex].detailsOne!,
                                                     style: const TextStyle(
                                                         color: textLight, fontSize: 14, fontFamily: 'sfmono'),
                                                   ),
@@ -185,12 +186,13 @@ class ExperienceDesktop extends StatelessWidget {
                                           height: 10,
                                         ),
                                         Row(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Expanded(
+                                            const Expanded(
                                               flex: 0,
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: const [
+                                                children: [
                                                   Padding(
                                                     padding: EdgeInsets.only(right: 5.0),
                                                     child: Icon(
@@ -208,7 +210,7 @@ class ExperienceDesktop extends StatelessWidget {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    experience[state.selectedIndex].details!,
+                                                    experience[state.selectedIndex].detailsTwo!,
                                                     style: const TextStyle(
                                                         color: textLight, fontSize: 14, fontFamily: 'sfmono'),
                                                   ),
@@ -221,12 +223,13 @@ class ExperienceDesktop extends StatelessWidget {
                                           height: 10,
                                         ),
                                         Row(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Expanded(
+                                            const Expanded(
                                               flex: 0,
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: const [
+                                                children: [
                                                   Padding(
                                                     padding: EdgeInsets.only(right: 5.0),
                                                     child: Icon(
@@ -244,7 +247,7 @@ class ExperienceDesktop extends StatelessWidget {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    experience[state.selectedIndex].details!,
+                                                    experience[state.selectedIndex].detailsThree!,
                                                     style: const TextStyle(
                                                         color: textLight, fontSize: 14, fontFamily: 'sfmono'),
                                                   ),

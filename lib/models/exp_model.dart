@@ -1,5 +1,4 @@
-import 'dart:ui';
-
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class ExperienceModel {
@@ -7,24 +6,38 @@ class ExperienceModel {
   String? position;
   String? year;
   String? currently;
-  String? details;
+  String? detailsOne;
+  String? detailsTwo;
+  String? detailsThree;
   Color? color;
-  ExperienceModel({this.companyName, this.position, this.year, this.currently, this.details, this.color});
+  ExperienceModel({
+    this.companyName,
+    this.position,
+    this.year,
+    this.currently,
+    this.detailsOne = "",
+    this.detailsTwo = "",
+    this.detailsThree = "",
+    this.color,
+  });
 }
 
 final List<ExperienceModel> experience = [
   ExperienceModel(
-      companyName: "Bizzntek Ltd",
-      position: "Associate Software Engineer",
-      year: "September 2022 - Present",
+      companyName: "B-Block",
+      position: "Software Engineer",
+      year: "February 2023 - Present",
       currently: "GG",
       color: Colors.blue,
-      details: "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
+      detailsOne: "Learned new flutter techniques",
+      detailsTwo: "Developed InHouse Applications"),
   ExperienceModel(
       companyName: "Bizzntek Ltd",
       position: "Associate Software Engineer",
-      year: "September 2022 - Present",
+      year: "September 2022 - May 2023",
       currently: "GG",
       color: Colors.blue,
-      details: "Write modern, performant, maintainable code for a diverse array of client and internal projects"),
+      detailsOne: "Learned Flutter Bloc",
+      detailsTwo: "Worked on a Property Management Application",
+      detailsThree: "Learned techniques to write clean code"),
 ];
