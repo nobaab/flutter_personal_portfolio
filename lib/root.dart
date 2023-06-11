@@ -38,10 +38,10 @@ class RootScreen extends StatelessWidget {
             ),
             actions: [
               !Responsive.isMobile(context) && !Responsive.isTablet(context)
-                  ? Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                  ? const Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
                       child: Row(
-                        children: const [
+                        children: [
                           AppbarWidget(),
                         ],
                       ))

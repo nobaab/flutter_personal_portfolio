@@ -4,7 +4,9 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/config/constants/colors.dart';
-import 'package:personal_portfolio/models/exp_model.dart';
+import 'package:personal_portfolio/screens/experience/data/model/exp_model.dart';
+
+import '../../screens/work/data/model/work_model.dart';
 
 part 'hover_event.dart';
 part 'hover_state.dart';
@@ -26,13 +28,19 @@ class HoverBloc extends Bloc<HoverEvent, HoverState> {
 
     on<ProfileImageEvent>((event, emit) => emit(ProfileImageState(height: 0.22, width: 0.22, blendMode: BlendMode.lighten)));
 
-    on<WorkImageEvent>((event, emit) => emit(WorkImageState(selectedIndex: event.selectedIndex)));
+    on<WorkImageEvent>((event, emit) {
+      emit(WorkImageState(selectedIndex: event.selectedIndex));
+    });
 
-    on<WorkContainerEvent>((event, emit) => emit(WorkContainerState(selectedIndex: event.selectedIndex)));
+    on<WorkContainerEvent>((event, emit) {
+      emit(WorkContainerState(selectedIndex: event.selectedIndex));
+    });
 
     on<ProfileImageBlendEvent>((event, emit) => emit(ProfileImageBlendState(blendMode: BlendMode.lighten)));
 
-    on<HoverOutEvent>((event, emit) => emit(HoverOutState()));
+    on<HoverOutEvent>((event, emit) {
+      emit(HoverOutState());
+    });
 
     on<DataLoadEvent>((event, emit) {
       emit(DataLoadedState(experienceData: event.experienceData, selectedIndex: event.selectedIndex, color: tabColor));
@@ -48,6 +56,10 @@ class HoverBloc extends Bloc<HoverEvent, HoverState> {
 
     on<LoadMoreEvent>((event, emit) {
       emit(LoadMoreState(length: event.length));
+    });
+
+    on<WorkDataLoadEvent>((event, emit) {
+      emit(WorkDataLoadedState(works: event.workData));
     });
   }
 }

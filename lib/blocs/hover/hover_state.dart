@@ -211,3 +211,15 @@ class LoadMoreState extends HoverState {
   @override
   List<Object?> get props => [length];
 }
+
+class WorkDataLoadedState extends HoverState {
+  final WorkResponseModel works;
+
+  const WorkDataLoadedState({
+    required this.works,
+  });
+  @override
+  List<Object?> get props => [
+        works,
+      ];
+}

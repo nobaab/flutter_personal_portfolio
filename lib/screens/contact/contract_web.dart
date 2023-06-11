@@ -45,10 +45,14 @@ class ContractWeb extends StatelessWidget {
                 color: Colors.transparent,
                 borderRadius: const BorderRadius.all(Radius.circular(3.0)),
                 border: Border.all(color: neonColor, width: 1.5)),
-            child: const Center(
+            child: Center(
               child: Text('Say Hello!',
                   style: TextStyle(
-                      color: neonColor, fontSize: 13, letterSpacing: 1, fontWeight: FontWeight.bold, fontFamily: 'sfmono')),
+                      color: neonColor,
+                      fontSize: 2.sp,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'sfmono')),
             ),
           ),
         ),

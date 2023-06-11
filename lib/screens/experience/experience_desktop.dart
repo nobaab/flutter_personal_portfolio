@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import '../../blocs/hover/hover_bloc.dart';
 import '../../config/constants/colors.dart';
-import '../../models/exp_model.dart';
+import 'data/model/exp_model.dart';
 
 class ExperienceDesktop extends StatelessWidget {
   const ExperienceDesktop({Key? key}) : super(key: key);

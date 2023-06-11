@@ -126,3 +126,13 @@ class LoadMoreEvent extends HoverEvent {
   @override
   List<Object?> get props => [length];
 }
+
+class WorkDataLoadEvent extends HoverEvent {
+  final WorkResponseModel workData;
+
+  const WorkDataLoadEvent({
+    required this.workData,
+  });
+  @override
+  List<Object?> get props => [workData];
+}
