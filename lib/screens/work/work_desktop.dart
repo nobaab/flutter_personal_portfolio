@@ -14,8 +14,6 @@ class WorkDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var maxlength = 6;
-
     return BlocProvider(
       create: (context) => HoverBloc()..add(WorkDataLoadEvent(workData: WorkResponseModel(techInfo: []))),
       child: Padding(

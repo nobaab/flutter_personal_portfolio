@@ -39,8 +39,8 @@ class ContractWeb extends StatelessWidget {
             }
           },
           child: Container(
-            height: 6.h,
-            width: 6.w,
+            height: MediaQuery.sizeOf(context).height * 0.05,
+            width: MediaQuery.sizeOf(context).width * 0.1,
             decoration: BoxDecoration(
                 color: Colors.transparent,
                 borderRadius: const BorderRadius.all(Radius.circular(3.0)),
