@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/config/constants/string_config.dart';
 import 'package:personal_portfolio/root.dart';
 import 'package:sizer/sizer.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         title: fullname!,
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          fontFamily: GoogleFonts.robotoSlab().fontFamily,
         ),
         home: const RootScreen(),
       );

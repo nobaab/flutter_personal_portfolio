@@ -151,15 +151,15 @@ class ExperienceDesktop extends StatelessWidget {
                                         Row(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            const Expanded(
+                                            Expanded(
                                               flex: 0,
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Padding(
-                                                    padding: EdgeInsets.only(right: 5.0),
+                                                    padding: const EdgeInsets.only(right: 5.0),
                                                     child: Icon(
-                                                      Icons.arrow_right,
+                                                      experience[state.selectedIndex].icon,
                                                       color: neonColor,
                                                       size: 20,
                                                     ),

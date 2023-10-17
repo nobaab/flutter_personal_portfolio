@@ -10,6 +10,7 @@ class ExperienceModel {
   String? detailsTwo;
   String? detailsThree;
   Color? color;
+  IconData icon;
   ExperienceModel({
     this.companyName,
     this.position,
@@ -19,6 +20,7 @@ class ExperienceModel {
     this.detailsTwo = "",
     this.detailsThree = "",
     this.color,
+    this.icon = Icons.arrow_right,
   });
 }
 

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:personal_portfolio/config/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../config/constants/colors.dart';
+class ContractMobile extends StatefulWidget {
+  const ContractMobile({Key? key}) : super(key: key);
 
-class ContractWeb extends StatelessWidget {
-  const ContractWeb({Key? key}) : super(key: key);
+  @override
+  State<ContractMobile> createState() => _ContractMobileState();
+}
 
+class _ContractMobileState extends State<ContractMobile> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,6 +33,9 @@ class ContractWeb extends StatelessWidget {
               'I am always open to new opportunities and connecting with like-minded individuals. If you have a question or simply want to reach out, my inbox is always open. Feel free to send me a message and I will respond as soon as I can.',
               style: GoogleFonts.robotoSlab(color: textLight, letterSpacing: 1, fontSize: 15)),
         ),
+        SizedBox(
+          height: 2.h,
+        ),
         InkWell(
           onTap: () async {
             const email = 'mailto:example@mail.com';
@@ -40,7 +47,7 @@ class ContractWeb extends StatelessWidget {
           },
           child: Container(
             height: MediaQuery.sizeOf(context).height * 0.05,
-            width: MediaQuery.sizeOf(context).width * 0.1,
+            width: MediaQuery.sizeOf(context).width * 0.3,
             decoration: BoxDecoration(
                 color: Colors.transparent,
                 borderRadius: const BorderRadius.all(Radius.circular(3.0)),
@@ -49,7 +56,7 @@ class ContractWeb extends StatelessWidget {
               child: Text('Say Hello!',
                   style: TextStyle(
                       color: neonColor,
-                      fontSize: 3.sp,
+                      fontSize: 8.sp,
                       letterSpacing: 1,
                       fontWeight: FontWeight.w700,
                       fontFamily: 'sfmono')),

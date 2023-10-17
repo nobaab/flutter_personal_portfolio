@@ -48,7 +48,6 @@ class WorkDesktop extends StatelessWidget {
             ),
             BlocBuilder<HoverBloc, HoverState>(
               builder: (context, state) {
-                Debugger("STATE>>>>>>> $state");
                 if (state is WorkDataLoadedState ||
                     state is WorkImageState ||
                     state is GridViewState ||
@@ -472,31 +471,6 @@ class WorkDesktop extends StatelessWidget {
                 }
               },
             ),
-            SizedBox(
-              height: 2.h,
-            ),
-            // InkWell(
-            //   onTap: () {
-            //     BlocProvider.of<HoverBloc>(context).add(LoadMoreEvent(length: maxlength += 3));
-            //   },
-            //   child: Container(
-            //     height: 6.h,
-            //     width: 6.w,
-            //     decoration: BoxDecoration(
-            //         color: Colors.transparent,
-            //         borderRadius: const BorderRadius.all(Radius.circular(3.0)),
-            //         border: Border.all(color: neonColor, width: 1.5)),
-            //     child: const Center(
-            //       child: Text('Show More',
-            //           style: TextStyle(
-            //               color: neonColor,
-            //               fontSize: 13,
-            //               letterSpacing: 1,
-            //               fontWeight: FontWeight.bold,
-            //               fontFamily: 'sfmono')),
-            //     ),
-            //   ),
-            // ),
             SizedBox(
               height: 2.h,
             ),
