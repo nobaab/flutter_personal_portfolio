@@ -11,6 +11,7 @@ class ExperienceModel {
   String? detailsThree;
   Color? color;
   IconData icon;
+  List<DetailsInfoModel>? detailsInfo;
   ExperienceModel({
     this.companyName,
     this.position,
@@ -21,6 +22,14 @@ class ExperienceModel {
     this.detailsThree = "",
     this.color,
     this.icon = Icons.arrow_right,
+    this.detailsInfo,
+  });
+}
+
+class DetailsInfoModel {
+  String? detailsData;
+  DetailsInfoModel({
+    this.detailsData,
   });
 }
 
@@ -32,7 +41,11 @@ final List<ExperienceModel> experience = [
       currently: "GG",
       color: Colors.blue,
       detailsOne: "Learned new flutter techniques",
-      detailsTwo: "Developed InHouse Applications"),
+      detailsTwo: "Developed InHouse Applications",
+      detailsInfo: [
+        DetailsInfoModel(detailsData: "Learned new flutter techniques"),
+        DetailsInfoModel(detailsData: "Developed InHouse Applications"),
+      ]),
   ExperienceModel(
       companyName: "Bizzntek Ltd",
       position: "Associate Software Engineer",
@@ -41,5 +54,10 @@ final List<ExperienceModel> experience = [
       color: Colors.blue,
       detailsOne: "Learned Flutter Bloc",
       detailsTwo: "Worked on a Property Management Application",
-      detailsThree: "Learned techniques to write clean code"),
+      detailsThree: "Learned techniques to write clean code",
+      detailsInfo: [
+        DetailsInfoModel(detailsData: "Learned Flutter Bloc"),
+        DetailsInfoModel(detailsData: "Worked on a Property Management Application"),
+        DetailsInfoModel(detailsData: "Learned techniques to write clean code"),
+      ]),
 ];

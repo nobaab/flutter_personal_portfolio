@@ -23,18 +23,12 @@ class AboutMeMobile extends StatelessWidget {
                   RichText(
                     text: TextSpan(
                         text: "01.",
-                        style: const TextStyle(
-                            color: neonColor,
-                            fontSize: 20,
-                            fontFamily: 'sfmono'),
+                        style: const TextStyle(color: neonColor, fontSize: 20, fontFamily: 'sfmono'),
                         children: <TextSpan>[
                           TextSpan(
                             text: ' About Me',
                             style: GoogleFonts.robotoSlab(
-                                color: Colors.white,
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25),
+                                color: Colors.white, letterSpacing: 1, fontWeight: FontWeight.bold, fontSize: 25),
                           )
                         ]),
                   ),
@@ -63,10 +57,7 @@ class AboutMeMobile extends StatelessWidget {
                         Text(
                           "$aboutme",
                           style: GoogleFonts.roboto(
-                            textStyle: const TextStyle(
-                                fontSize: 15,
-                                color: textLight,
-                                letterSpacing: 1),
+                            textStyle: const TextStyle(fontSize: 15, color: textLight, letterSpacing: 1),
                           ),
                           textAlign: TextAlign.justify,
                         ),
@@ -80,10 +71,7 @@ class AboutMeMobile extends StatelessWidget {
                         Text(
                           "Here is the few technology i know",
                           style: GoogleFonts.roboto(
-                            textStyle: const TextStyle(
-                                fontSize: 15,
-                                color: bigText,
-                                letterSpacing: .5),
+                            textStyle: const TextStyle(fontSize: 15, color: bigText, letterSpacing: .5),
                           ),
                         ),
                         const SizedBox(
@@ -108,8 +96,7 @@ class AboutMeMobile extends StatelessWidget {
                 onTap: () {},
                 onHover: (value) {
                   if (value) {
-                    BlocProvider.of<HoverBloc>(context)
-                        .add(ProfileImageEvent());
+                    BlocProvider.of<HoverBloc>(context).add(ProfileImageEvent());
                   } else {
                     BlocProvider.of<HoverBloc>(context).add(HoverOutEvent());
                   }
@@ -117,32 +104,23 @@ class AboutMeMobile extends StatelessWidget {
                 child: Stack(
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width *
-                          (state is ProfileImageState ? state.height : 0.5),
-                      height: MediaQuery.of(context).size.width *
-                          (state is ProfileImageState ? state.width : 0.5),
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      height: MediaQuery.of(context).size.width * 0.5,
                       margin: const EdgeInsets.only(top: 10, left: 10),
                       decoration: BoxDecoration(
                           color: Colors.transparent,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(5.0)),
+                          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                           border: Border.all(color: neonColor, width: 1.5)),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.5,
                       height: MediaQuery.of(context).size.width * 0.5,
-                      decoration: BoxDecoration(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(5.0)),
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              colorFilter: ColorFilter.mode(
-                                  const Color(0xff0a192e),
-                                  state is ProfileImageState
-                                      ? state.blendMode
-                                      : BlendMode.colorDodge),
-                              image:
-                                  const AssetImage('assets/images/mine.jpg')),
+                              colorFilter: ColorFilter.mode(Color(0xff0a192e), BlendMode.colorDodge),
+                              image: AssetImage('assets/images/mine.jpg')),
                           color: Colors.transparent),
                     ),
                   ],

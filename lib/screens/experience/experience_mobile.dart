@@ -148,114 +148,52 @@ class ExperienceMobile extends StatelessWidget {
                                         const SizedBox(
                                           height: 10,
                                         ),
-                                        Row(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            const Expanded(
-                                              flex: 0,
-                                              child: Column(
+                                        ListView.separated(
+                                            separatorBuilder: (context, index) {
+                                              return const SizedBox(
+                                                height: 5,
+                                              );
+                                            },
+                                            shrinkWrap: true,
+                                            itemCount: experience[state.selectedIndex].detailsInfo!.length,
+                                            itemBuilder: (context, detailsIndex) {
+                                              return Row(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
-                                                  Padding(
-                                                    padding: EdgeInsets.only(right: 5.0),
-                                                    child: Icon(
-                                                      Icons.arrow_right,
-                                                      color: neonColor,
-                                                      size: 20,
+                                                  const Expanded(
+                                                    flex: 0,
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Padding(
+                                                          padding: EdgeInsets.only(right: 5.0),
+                                                          child: Icon(
+                                                            Icons.arrow_right,
+                                                            color: neonColor,
+                                                            size: 20,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Expanded(
+                                                    flex: 5,
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Text(
+                                                          experience[state.selectedIndex]
+                                                              .detailsInfo![detailsIndex]
+                                                              .detailsData!,
+                                                          style: const TextStyle(
+                                                              color: textLight, fontSize: 14, fontFamily: 'sfmono'),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
                                                 ],
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 5,
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    experience[state.selectedIndex].detailsOne!,
-                                                    style: const TextStyle(
-                                                        color: textLight, fontSize: 14, fontFamily: 'sfmono'),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Expanded(
-                                              flex: 0,
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Padding(
-                                                    padding: const EdgeInsets.only(right: 5.0),
-                                                    child: Icon(
-                                                      experience[state.selectedIndex].icon,
-                                                      color: neonColor,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 5,
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    experience[state.selectedIndex].detailsTwo!,
-                                                    style: const TextStyle(
-                                                        color: textLight, fontSize: 14, fontFamily: 'sfmono'),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            const Expanded(
-                                              flex: 0,
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Padding(
-                                                    padding: EdgeInsets.only(right: 5.0),
-                                                    child: Icon(
-                                                      Icons.arrow_right,
-                                                      color: neonColor,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 5,
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    experience[state.selectedIndex].detailsThree!,
-                                                    style: const TextStyle(
-                                                        color: textLight, fontSize: 14, fontFamily: 'sfmono'),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
+                                              );
+                                            }),
                                       ],
                                     ),
                                   );

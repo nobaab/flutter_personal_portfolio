@@ -87,9 +87,6 @@ class _WorkMobileState extends State<WorkMobile> {
                                             borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                                             image: DecorationImage(
                                               fit: BoxFit.fill,
-                                              colorFilter: state is WorkImageState && state.selectedIndex == index
-                                                  ? null // Remove the color filter when the image is selected
-                                                  : const ColorFilter.mode(Color(0xFF1d4652), BlendMode.lighten),
                                               image: works[index].image!,
                                             ),
                                             color: Colors.transparent,
@@ -201,9 +198,6 @@ class _WorkMobileState extends State<WorkMobile> {
                                             borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                                             image: DecorationImage(
                                               fit: BoxFit.fill,
-                                              colorFilter: state is WorkImageState && state.selectedIndex == index
-                                                  ? null // Remove the color filter when the image is selected
-                                                  : const ColorFilter.mode(Color(0xFF1d4652), BlendMode.lighten),
                                               image: works[index].image!,
                                             ),
                                             color: Colors.transparent,
