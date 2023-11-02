@@ -156,6 +156,7 @@ class ExperienceDesktop extends StatelessWidget {
                                             },
                                             shrinkWrap: true,
                                             itemCount: experience[state.selectedIndex].detailsInfo!.length,
+                                            physics: const NeverScrollableScrollPhysics(),
                                             itemBuilder: (context, detailsIndex) {
                                               return Row(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
